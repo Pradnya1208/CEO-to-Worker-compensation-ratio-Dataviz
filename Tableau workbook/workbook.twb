@@ -1,0 +1,3020 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0315.1000                               -->
+<workbook include-phone-layouts='false' original-version='18.1' source-build='2020.4.3 (20204.21.0315.1000)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <BasicButtonObject />
+    <BasicButtonObjectTextSupport />
+    <CollapsiblePane />
+    <IncludePhoneLayoutsOptOut />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneVisibilityControl />
+  </document-format-change-manifest>
+  <repository-location id='CEO-to-WorkercompensationratioMakeoverMonday2021' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Column object_' datatype='integer' name='[Column object (copy)_1379508900191776772]' param-domain-type='range' role='measure' type='quantitative' value='7'>
+        <calculation class='tableau' formula='7' />
+        <range max='20' min='1' />
+      </column>
+      <column caption='Column object' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='4'>
+        <calculation class='tableau' formula='4' />
+        <range max='20' min='1' />
+      </column>
+      <column caption='offset' datatype='real' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='0.5'>
+        <calculation class='tableau' formula='0.5' />
+        <range max='20.0' min='0.0' />
+      </column>
+    </datasource>
+    <datasource caption='CEO_dataset' inline='true' name='federated.1xsy6441k3ol2n1fc74wi19ehcru' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='CEO_dataset' name='textscan.0vj5g450mq6sci19nf8sc1xsxw4x'>
+            <connection class='textscan' directory='C:/Users/Admin/Desktop/Viz art/CEO' filename='CEO_dataset.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0vj5g450mq6sci19nf8sc1xsxw4x' name='CEO_dataset.csv' table='[CEO_dataset#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Year' ordinal='0' />
+            <column datatype='integer' name='rank' ordinal='1' />
+            <column datatype='real' name='Realized CEO compensation' ordinal='2' />
+            <column datatype='real' name='Granted CEO compensation' ordinal='3' />
+            <column datatype='integer' name='Decades' ordinal='4' />
+            <column datatype='integer' name='rank1' ordinal='5' />
+            <column datatype='real' name='Avg. Realized CEO compensation' ordinal='6' />
+            <column datatype='real' name='Avg. Granted CEO compensation' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0vj5g450mq6sci19nf8sc1xsxw4x' name='CEO_dataset.csv' table='[CEO_dataset#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Year' ordinal='0' />
+            <column datatype='integer' name='rank' ordinal='1' />
+            <column datatype='real' name='Realized CEO compensation' ordinal='2' />
+            <column datatype='real' name='Granted CEO compensation' ordinal='3' />
+            <column datatype='integer' name='Decades' ordinal='4' />
+            <column datatype='integer' name='rank1' ordinal='5' />
+            <column datatype='real' name='Avg. Realized CEO compensation' ordinal='6' />
+            <column datatype='real' name='Avg. Granted CEO compensation' ordinal='7' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[CEO_dataset.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[CEO_dataset.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rank]</local-name>
+            <parent-name>[CEO_dataset.csv]</parent-name>
+            <remote-alias>rank</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Realized CEO compensation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Realized CEO compensation]</local-name>
+            <parent-name>[CEO_dataset.csv]</parent-name>
+            <remote-alias>Realized CEO compensation</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Granted CEO compensation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Granted CEO compensation]</local-name>
+            <parent-name>[CEO_dataset.csv]</parent-name>
+            <remote-alias>Granted CEO compensation</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Decades</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Decades]</local-name>
+            <parent-name>[CEO_dataset.csv]</parent-name>
+            <remote-alias>Decades</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rank1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[rank1]</local-name>
+            <parent-name>[CEO_dataset.csv]</parent-name>
+            <remote-alias>rank1</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg. Realized CEO compensation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Avg. Realized CEO compensation]</local-name>
+            <parent-name>[CEO_dataset.csv]</parent-name>
+            <remote-alias>Avg. Realized CEO compensation</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Avg. Granted CEO compensation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Avg. Granted CEO compensation]</local-name>
+            <parent-name>[CEO_dataset.csv]</parent-name>
+            <remote-alias>Avg. Granted CEO compensation</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' caption='Col' datatype='integer' name='[Calculation_367606358841819137]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='INT(([rank]) / [Parameters].[Parameter 1])' />
+      </column>
+      <column aggregation='Sum' caption='Rows' datatype='integer' name='[Calculation_367606358842773508]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='INT(([rank]) % [Parameters].[Parameter 1])' />
+      </column>
+      <column caption='color_granted' datatype='boolean' name='[Calculation_367606358871699462]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='([rank]+1) &lt;= ROUND([Granted CEO compensation],0)' />
+      </column>
+      <column aggregation='Sum' caption='Col_' datatype='integer' name='[Col (copy)_1379508900190306304]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='INT(([rank1]) / [Parameters].[Column object (copy)_1379508900191776772])' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Decades]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[Granted CEO compensation]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Realized CEO compensation]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Rows_' datatype='integer' name='[Rows (copy)_1379508900190461953]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='INT(([rank1]) % [Parameters].[Column object (copy)_1379508900191776772])' />
+      </column>
+      <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='CEO_dataset.csv' datatype='table' name='[__tableau_internal_object_id__].[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]' role='measure' type='quantitative' />
+      <column caption='color_granted_' datatype='boolean' name='[color_granted (copy)_1379508900190601218]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='([rank1]+1) &lt;= ROUND([Avg. Granted CEO compensation],0)' />
+      </column>
+      <column caption='color_realized' datatype='boolean' name='[color_granted (copy)_367606358878257159]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='([rank]+1) &lt;= ROUND([Realized CEO compensation],0)' />
+      </column>
+      <column caption='color_realized_' datatype='boolean' name='[color_realized (copy)_1379508900191035395]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='([rank1]+1) &lt;= ROUND([Avg. Realized CEO compensation],0)' />
+      </column>
+      <column caption='Rank1' datatype='integer' name='[rank1]' role='measure' type='quantitative' />
+      <column caption='Rank' datatype='integer' name='[rank]' role='measure' type='quantitative' />
+      <column-instance column='[color_granted Set]' derivation='InOut' name='[io:color_granted Set:nk]' pivot='key' type='nominal' />
+      <column-instance column='[color_granted_ Set]' derivation='InOut' name='[io:color_granted_ Set:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_367606358871699462]' derivation='None' name='[none:Calculation_367606358871699462:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Realized CEO compensation]' derivation='Max' name='[pcdf:max:Realized CEO compensation:qk:1]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' ordering-type='Field' type='PctDiff'>
+          <address>
+            <value>-2</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Realized CEO compensation]' derivation='Max' name='[pcdf:max:Realized CEO compensation:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' ordering-type='Field' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Granted CEO compensation]' derivation='Sum' name='[pcdf:sum:Granted CEO compensation:qk:2]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Granted CEO compensation]' derivation='Sum' name='[pcdf:sum:Granted CEO compensation:qk:3]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+          <address>
+            <value>-2</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Granted CEO compensation]' derivation='Sum' name='[pcdf:sum:Granted CEO compensation:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Columns' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk:1]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' ordering-type='Field' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk:2]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Columns' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk:3]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' ordering-type='Field' type='PctDiff'>
+          <address>
+            <value>-2</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk:4]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+          <address>
+            <value>-2</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk:5]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[Year]' ordering-type='Field' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk:8]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[Year]' ordering-type='Field' type='PctDiff'>
+          <address>
+            <value>-2</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk:9]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Fixed' ordering-field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[Year]' ordering-type='Field' type='PctDiff'>
+          <address>
+            <value>&quot;2009&quot;</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <group caption='color_granted Set' name='[color_granted Set]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter function='member' level='[none:Calculation_367606358871699462:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </group>
+      <group caption='color_granted_ Set_' name='[color_granted_ Set]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter function='member' level='[color_granted (copy)_1379508900190601218]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </group>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/Admin/Desktop/Viz art/CEO/CEO_dataset.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/06/2021 09:52:50 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='CEO_dataset' increment-value='%null%' refresh-type='create' rows-inserted='21505' timestamp-start='2021-05-06 09:52:50.621' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Year</remote-alias>
+              <ordinal>0</ordinal>
+              <family>CEO_dataset.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rank</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[rank]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rank</remote-alias>
+              <ordinal>1</ordinal>
+              <family>CEO_dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>611</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Realized CEO compensation</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Realized CEO compensation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Realized CEO compensation</remote-alias>
+              <ordinal>2</ordinal>
+              <family>CEO_dataset.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Granted CEO compensation</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Granted CEO compensation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Granted CEO compensation</remote-alias>
+              <ordinal>3</ordinal>
+              <family>CEO_dataset.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Decades</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Decades]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Decades</remote-alias>
+              <ordinal>4</ordinal>
+              <family>CEO_dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rank1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[rank1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rank1</remote-alias>
+              <ordinal>5</ordinal>
+              <family>CEO_dataset.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>894</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg. Realized CEO compensation</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Avg. Realized CEO compensation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg. Realized CEO compensation</remote-alias>
+              <ordinal>6</ordinal>
+              <family>CEO_dataset.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Avg. Granted CEO compensation</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Avg. Granted CEO compensation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Avg. Granted CEO compensation</remote-alias>
+              <ordinal>7</ordinal>
+              <family>CEO_dataset.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_367606358871699462:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' palette='nuriel_stone_10_0' type='palette'>
+            <map to='#21b087'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</bucket>
+            </map>
+            <map to='#21b087'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]&quot;</bucket>
+            </map>
+            <map to='#21b087'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:8]&quot;</bucket>
+            </map>
+            <map to='#21b087'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:9]&quot;</bucket>
+            </map>
+            <map to='#21b087'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:2]&quot;</bucket>
+            </map>
+            <map to='#6fb899'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:max:Realized CEO compensation:qk:1]&quot;</bucket>
+            </map>
+            <map to='#6fb899'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]&quot;</bucket>
+            </map>
+            <map to='#8175aa'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]&quot;</bucket>
+            </map>
+            <map to='#8175aa'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:max:Realized CEO compensation:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:1]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[io:color_granted Set:nk]' palette='nuriel_stone_10_0' type='palette'>
+            <map to='#21b087'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#8175aa'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[io:color_granted_ Set:nk]' palette='nuriel_stone_10_0' type='palette'>
+            <map to='#21b087'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#8175aa'>
+              <bucket>true</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Column object_' datatype='integer' name='[Column object (copy)_1379508900191776772]' param-domain-type='range' role='measure' type='quantitative' value='7'>
+          <calculation class='tableau' formula='7' />
+          <range max='20' min='1' />
+        </column>
+        <column caption='Column object' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='4'>
+          <calculation class='tableau' formula='4' />
+          <range max='20' min='1' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='CEO_dataset.csv' id='CEO_dataset.csv_01EC56CF892E4A2E8226A6591AF5A00A'>
+            <properties context=''>
+              <relation connection='textscan.0vj5g450mq6sci19nf8sc1xsxw4x' name='CEO_dataset.csv' table='[CEO_dataset#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Year' ordinal='0' />
+                  <column datatype='integer' name='rank' ordinal='1' />
+                  <column datatype='real' name='Realized CEO compensation' ordinal='2' />
+                  <column datatype='real' name='Granted CEO compensation' ordinal='3' />
+                  <column datatype='integer' name='Decades' ordinal='4' />
+                  <column datatype='integer' name='rank1' ordinal='5' />
+                  <column datatype='real' name='Avg. Realized CEO compensation' ordinal='6' />
+                  <column datatype='real' name='Avg. Granted CEO compensation' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='%compensation since 1965'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CEO_dataset' name='federated.1xsy6441k3ol2n1fc74wi19ehcru' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xsy6441k3ol2n1fc74wi19ehcru'>
+            <column datatype='real' name='[Granted CEO compensation]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Realized CEO compensation]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Granted CEO compensation]' derivation='Max' name='[max:Granted CEO compensation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Realized CEO compensation]' derivation='Max' name='[max:Realized CEO compensation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Granted CEO compensation]' derivation='Sum' name='[pcdf:sum:Granted CEO compensation:qk:3]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+                <address>
+                  <value>-2</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk:3]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-2</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk:4]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+                <address>
+                  <value>-2</value>
+                </address>
+              </table-calc>
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]' scope='rows' value='false' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' data-class='subtotal' value='#333333' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='color' data-class='subtotal' value='#666666' />
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='false' />
+            <format attr='color' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='#b4b4b4' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='size-bar' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='size-bar' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='font-family' value='Tableau Light' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#c0c0c0' />
+            <format attr='font-size' value='6' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='body-type' id='annotation_2' value='none' />
+            <format attr='fill-color' id='annotation_2' value='#00000000' />
+            <format attr='border-width' id='annotation_4' value='0' />
+            <format attr='body-type' id='annotation_4' value='box' />
+            <format attr='fill-color' id='annotation_4' value='#33333334' />
+            <format attr='body-type' id='annotation_5' value='box' />
+            <format attr='fill-color' id='annotation_5' value='#33333334' />
+            <format attr='stroke-color' id='annotation_5' value='#333333e7' />
+            <format attr='stroke-color' id='annotation_4' value='#333333e7' />
+            <format attr='stroke-color' id='annotation_3' value='#333333e7' />
+            <format attr='stroke-color' id='annotation_2' value='#333333e7' />
+            <format attr='body-type' id='annotation_3' value='box' />
+            <format attr='fill-color' id='annotation_3' value='#3333334e' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' />
+              <color column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Growth in Realized CEO compensation since 1965:	</run>
+                <run fontcolor='#499894' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Growth in Granted CEO compensation since 1965:	</run>
+                <run fontcolor='#765b91' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#f5f5f5'>&lt;</run>
+                <run fontcolor='#f5f5f5'>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:max:Realized CEO compensation:qk:4]</run>
+                <run fontcolor='#f5f5f5'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='1.1204420328140259' />
+                <format attr='mark-markers-mode' value='all' />
+                <format attr='mark-color' value='#499894' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#499894' />
+                <format attr='mark-transparency' value='180' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]' />
+              <color column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Growth in Realized CEO compensation since 1965:	</run>
+                <run fontcolor='#499894' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Growth in Granted CEO compensation since 1965:	</run>
+                <run fontcolor='#765b91' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.1204420328140259' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-markers-mode' value='all' />
+                <format attr='mark-color' value='#499894' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#499894' />
+                <format attr='mark-transparency' value='78' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' />
+              <color column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Growth in Realized CEO compensation since 1965:	</run>
+                <run fontcolor='#499894' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Growth in Granted CEO compensation since 1965:	</run>
+                <run fontcolor='#765b91' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.1204420328140259' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-markers-mode' value='all' />
+                <format attr='mark-color' value='#499894' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#499894' />
+                <format attr='mark-transparency' value='180' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3] + [federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3])</rows>
+        <cols>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>386.10000000000002</value>
+                <value>&quot;2000&quot;</value>
+                <value>24.071428571428875</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>235.0</value>
+                <value>&quot;2002&quot;</value>
+                <value>14.259740259740333</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>293.39999999999998</value>
+                <value>&quot;1998&quot;</value>
+                <value>18.05194805194802</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>178.30000000000001</value>
+                <value>&quot;2009&quot;</value>
+                <value>10.577922077922217</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>201.30000000000001</value>
+                <value>&quot;2012&quot;</value>
+                <value>12.071428571428731</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>31.0</value>
+                <value>42.299999999999997</value>
+                <value>&quot;1982&quot;</value>
+                <value>1.0047393364928625</value>
+                <value>1.0047393364928625</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>322.60000000000002</value>
+                <value>210.59999999999999</value>
+                <value>&quot;2001&quot;</value>
+                <value>8.9810426540283803</value>
+                <value>8.9810426540283803</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>201.30000000000001</value>
+                <value>371.69999999999999</value>
+                <value>&quot;2012&quot;</value>
+                <value>16.616113744075669</value>
+                <value>16.616113744075669</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>222.80000000000001</value>
+                <value>320.0</value>
+                <value>&quot;2019&quot;</value>
+                <value>14.165876777251077</value>
+                <value>14.165876777251077</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>19.5</value>
+                <value>26.600000000000001</value>
+                <value>&quot;1975&quot;</value>
+                <value>0.2606635071090051</value>
+                <value>0.2606635071090051</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='10' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>41.0</value>
+                <value>55.899999999999999</value>
+                <value>&quot;1987&quot;</value>
+                <value>1.6492890995260556</value>
+                <value>1.6492890995260556</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='11' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                  <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>17.800000000000001</value>
+                <value>24.300000000000001</value>
+                <value>&quot;1970&quot;</value>
+                <value>0.15165876777250425</value>
+                <value>0.15165876777250425</value>
+                <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+        <annotations>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='128'>
+            <formatted-text />
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>178.30000000000001</value>
+                    <value>177.59999999999999</value>
+                    <value>&quot;2009&quot;</value>
+                    <value>7.4170616113743169</value>
+                    <value>7.4170616113743169</value>
+                    <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='3' y='-302' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='75'>
+            <formatted-text>
+              <run fontcolor='#898989' fontsize='8'>Great Recession</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>219.40000000000001</value>
+                    <value>206.69999999999999</value>
+                    <value>&quot;2008&quot;</value>
+                    <value>8.7962085308055435</value>
+                    <value>8.7962085308055435</value>
+                    <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='15' y='-282' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='1.41421' text-width='84'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#898989' fontsize='8'>dot-com bubble</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>131.0</value>
+                    <value>117.59999999999999</value>
+                    <value>&quot;1995&quot;</value>
+                    <value>4.5734597156397312</value>
+                    <value>4.5734597156397312</value>
+                    <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-157' y='-83' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='2.23607' text-width='75'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#898989' fontsize='8'>Stock Market crash</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Realized CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:4]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>322.60000000000002</value>
+                    <value>210.59999999999999</value>
+                    <value>&quot;2001&quot;</value>
+                    <value>8.9810426540283803</value>
+                    <value>8.9810426540283803</value>
+                    <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:3]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-211' y='-143' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{9E6901E6-1754-42A0-961D-480FE97AA29D}' />
+    </worksheet>
+    <worksheet name='%compensation yearly'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CEO_dataset' name='federated.1xsy6441k3ol2n1fc74wi19ehcru' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1xsy6441k3ol2n1fc74wi19ehcru'>
+            <column datatype='real' name='[Granted CEO compensation]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Realized CEO compensation]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column-instance column='[Granted CEO compensation]' derivation='Max' name='[max:Granted CEO compensation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Granted CEO compensation]' derivation='Max' name='[pcdf:max:Granted CEO compensation:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Granted CEO compensation]' derivation='Sum' name='[pcdf:sum:Granted CEO compensation:qk:2]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk:5]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[Year]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Realized CEO compensation]' derivation='Sum' name='[pcdf:sum:Realized CEO compensation:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]' included-values='non-null' />
+          <slices>
+            <column>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]' scope='rows' value='false' />
+            <encoding attr='space' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]' scope='rows' value='false' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='false' />
+            <format attr='font-family' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='Tableau Light' />
+            <format attr='font-weight' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='bold' />
+            <format attr='color' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='#b4b4b4' />
+            <format attr='font-size' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='6' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='size-bar' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#0b3f3332' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='body-type' id='annotation_2' value='none' />
+            <format attr='fill-color' id='annotation_2' value='#00000000' />
+            <format attr='body-type' id='annotation_4' value='box' />
+            <format attr='fill-color' id='annotation_4' value='#33333334' />
+            <format attr='fill-color' id='annotation_1' value='#33333334' />
+            <format attr='stroke-color' id='annotation_4' value='#333333e7' />
+            <format attr='stroke-color' id='annotation_1' value='#333333e7' />
+            <format attr='stroke-color' id='annotation_2' value='#333333e7' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Yearly growth in Granted CEO compensation :	</run>
+                <run fontcolor='#765b91' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Yearly growth in Realized CEO compensation:</run>
+                <run fontcolor='#499894' fontname='Tableau Bold'><![CDATA[	<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]' />
+              <color column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Yearly growth in Granted CEO compensation :	</run>
+                <run fontcolor='#765b91' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Yearly growth in Realized CEO compensation:</run>
+                <run fontcolor='#499894' fontname='Tableau Bold'><![CDATA[	<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='0.35082873702049255' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-markers-mode' value='auto' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:max:Granted CEO compensation:qk]' />
+              <color column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#000000' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Yearly growth in Granted CEO compensation :	</run>
+                <run fontcolor='#765b91' fontname='Tableau Bold'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#000000' fontname='Tableau Bold'>Yearly growth in Realized CEO compensation:</run>
+                <run fontcolor='#499894' fontname='Tableau Bold'><![CDATA[	<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#b4b4b4' fontname='Tableau Light' fontsize='6'>&lt;</run>
+                <run bold='true' fontcolor='#b4b4b4' fontname='Tableau Light' fontsize='6'>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk]</run>
+                <run bold='true' fontcolor='#b4b4b4' fontname='Tableau Light' fontsize='6'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.3183425664901733' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#16715f' />
+                <format attr='mark-transparency' value='42' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2] + [federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5])</rows>
+        <cols>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</cols>
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='88'>
+            <formatted-text>
+              <run bold='true' fontcolor='#898989' fontname='Tableau Light' fontsize='8'>Great Recession</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[max:Granted CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>219.40000000000001</value>
+                    <value>&quot;2008&quot;</value>
+                    <value>-0.093388429752068639</value>
+                    <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Granted CEO compensation:qk:2]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-13' y='-235' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='88'>
+            <formatted-text />
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:max:Granted CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;2009&quot;</value>
+                    <value>-0.18732907930720144</value>
+                    <value>-0.14078374455732626</value>
+                    <value>-0.14078374455732626</value>
+                    <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-25' y='-240' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='120'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#898989' fontname='Tableau Light' fontsize='8'>Stock Market Crash</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:max:Granted CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk]</field>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>&quot;2001&quot;</value>
+                    <value>-0.16446516446516446</value>
+                    <value>-0.42411812961443562</value>
+                    <value>-0.42411812961443562</value>
+                    <value>&quot;[federated.1xsy6441k3ol2n1fc74wi19ehcru].[pcdf:sum:Realized CEO compensation:qk:5]&quot;</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='-171' y='-12' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{D916E917-E189-4753-BB0A-B2AE2B258F2C}' />
+    </worksheet>
+    <worksheet name='Compensation over the years'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CEO_dataset' name='federated.1xsy6441k3ol2n1fc74wi19ehcru' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Column object' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='4'>
+              <calculation class='tableau' formula='4' />
+              <range max='20' min='1' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1xsy6441k3ol2n1fc74wi19ehcru'>
+            <column aggregation='Sum' caption='Col' datatype='integer' name='[Calculation_367606358841819137]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='INT(([rank]) / [Parameters].[Parameter 1])' />
+            </column>
+            <column aggregation='Sum' caption='Rows' datatype='integer' name='[Calculation_367606358842773508]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='INT(([rank]) % [Parameters].[Parameter 1])' />
+            </column>
+            <column caption='color_granted' datatype='boolean' name='[Calculation_367606358871699462]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='([rank]+1) &lt;= ROUND([Granted CEO compensation],0)' />
+            </column>
+            <column datatype='real' name='[Granted CEO compensation]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Realized CEO compensation]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year]' role='dimension' type='nominal' />
+            <column caption='color_realized' datatype='boolean' name='[color_granted (copy)_367606358878257159]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='([rank]+1) &lt;= ROUND([Realized CEO compensation],0)' />
+            </column>
+            <column-instance column='[color_granted Set]' derivation='InOut' name='[io:color_granted Set:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_367606358841819137]' derivation='None' name='[none:Calculation_367606358841819137:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_367606358842773508]' derivation='None' name='[none:Calculation_367606358842773508:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_367606358871699462]' derivation='None' name='[none:Calculation_367606358871699462:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Granted CEO compensation]' derivation='None' name='[none:Granted CEO compensation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Realized CEO compensation]' derivation='None' name='[none:Realized CEO compensation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[color_granted (copy)_367606358878257159]' derivation='None' name='[none:color_granted (copy)_367606358878257159:nk]' pivot='key' type='nominal' />
+            <column caption='Rank' datatype='integer' name='[rank]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:color_granted (copy)_367606358878257159:nk]'>
+            <groupfilter function='member' level='[none:color_granted (copy)_367606358878257159:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:color_granted (copy)_367606358878257159:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358841819137:qk]' value='40' />
+            <format attr='display' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358842773508:qk]' scope='cols' value='false' />
+            <format attr='display' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358841819137:qk]' scope='rows' value='false' />
+            <encoding attr='space' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358842773508:qk]' field-type='quantitative' max='4' min='-1' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358841819137:qk]' field-type='quantitative' max='97' min='-5' range-type='fixed' scope='rows' type='space' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='text-format' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Granted CEO compensation:qk]' value='n#,##0;-#,##0' />
+            <format attr='text-format' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Realized CEO compensation:qk]' value='n#,##0;-#,##0' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='true' />
+            <format attr='text-format' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Granted CEO compensation:qk]' value='n#,##0;-#,##0' />
+            <format attr='text-format' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Realized CEO compensation:qk]' value='c&quot;₹ &quot;#,##0;&quot;₹ &quot;-#,##0' />
+            <format attr='text-orientation' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='-90' />
+            <format attr='text-align' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='right' />
+            <format attr='vertical-align' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='center' />
+            <format attr='font-size' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='8' />
+            <format attr='font-family' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' value='#868686' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
+            <format attr='border-color' scope='cols' value='#000000' />
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-color' scope='cols' value='#000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='div-level' scope='rows' value='1' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='div-level' scope='cols' value='2' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[io:color_granted Set:nk]' />
+              <text column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Realized CEO compensation:qk]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Granted CEO compensation:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#000000' fontname='Tableau Bold' fontsize='12'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' fontsize='12'>Granted CEO compensation:&#9;</run>
+                <run bold='true' fontcolor='#765b91' fontname='Tableau Bold' fontsize='13'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Granted CEO compensation:qk]>:1]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000' fontsize='12'>Realized CEO compensation:&#9;</run>
+                <run bold='true' fontcolor='#499894' fontname='Tableau Bold' fontsize='13'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Realized CEO compensation:qk]>:1]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#f5f5f5' fontsize='6'>&lt;</run>
+                <run fontcolor='#f5f5f5' fontsize='6'>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Realized CEO compensation:qk]</run>
+                <run fontcolor='#f5f5f5' fontsize='6'>&gt;:1</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='on' />
+                <format attr='text-align' value='right' />
+                <format attr='text-orientation' value='-90' />
+                <format attr='vertical-align' value='top' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Tableau Light' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='7' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='0.0099999997764825821' />
+                <format attr='shape' value='asterisk' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-range-field' value='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358841819137:qk]</rows>
+        <cols>([federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk] * [federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358842773508:qk])</cols>
+      </table>
+      <simple-id uuid='{891C497A-0FB6-48C3-B63F-2B3DB4E248A7}' />
+    </worksheet>
+    <worksheet name='compensation-decades'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='CEO_dataset' name='federated.1xsy6441k3ol2n1fc74wi19ehcru' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Column object_' datatype='integer' name='[Column object (copy)_1379508900191776772]' param-domain-type='range' role='measure' type='quantitative' value='7'>
+              <calculation class='tableau' formula='7' />
+              <range max='20' min='1' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1xsy6441k3ol2n1fc74wi19ehcru'>
+            <column datatype='real' name='[Avg. Granted CEO compensation]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Avg. Realized CEO compensation]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Col_' datatype='integer' name='[Col (copy)_1379508900190306304]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='INT(([rank1]) / [Parameters].[Column object (copy)_1379508900191776772])' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[Decades]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Rows_' datatype='integer' name='[Rows (copy)_1379508900190461953]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='INT(([rank1]) % [Parameters].[Column object (copy)_1379508900191776772])' />
+            </column>
+            <column caption='color_granted_' datatype='boolean' name='[color_granted (copy)_1379508900190601218]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='([rank1]+1) &lt;= ROUND([Avg. Granted CEO compensation],0)' />
+            </column>
+            <column caption='color_realized_' datatype='boolean' name='[color_realized (copy)_1379508900191035395]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='([rank1]+1) &lt;= ROUND([Avg. Realized CEO compensation],0)' />
+            </column>
+            <column-instance column='[color_granted_ Set]' derivation='InOut' name='[io:color_granted_ Set:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Col (copy)_1379508900190306304]' derivation='None' name='[none:Col (copy)_1379508900190306304:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Decades]' derivation='None' name='[none:Decades:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Rows (copy)_1379508900190461953]' derivation='None' name='[none:Rows (copy)_1379508900190461953:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[color_realized (copy)_1379508900191035395]' derivation='None' name='[none:color_realized (copy)_1379508900191035395:nk]' pivot='key' type='nominal' />
+            <column caption='Rank1' datatype='integer' name='[rank1]' role='measure' type='quantitative' />
+            <column-instance column='[Avg. Granted CEO compensation]' derivation='Sum' name='[sum:Avg. Granted CEO compensation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Avg. Realized CEO compensation]' derivation='Sum' name='[sum:Avg. Realized CEO compensation:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:color_realized (copy)_1379508900191035395:nk]'>
+            <groupfilter function='member' level='[none:color_realized (copy)_1379508900191035395:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:color_realized (copy)_1379508900191035395:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]' scope='cols' value='false' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='font-family' data-class='subtotal' scope='cols' value='Tableau Light' />
+            <format attr='color' data-class='subtotal' scope='cols' value='#f5f5f5' />
+            <format attr='text-format' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[sum:Avg. Granted CEO compensation:qk]' value='n#,##0;-#,##0' />
+            <format attr='text-format' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[sum:Avg. Realized CEO compensation:qk]' value='n#,##0;-#,##0' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]' value='44' />
+            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='cols' value='#c0c0c0' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-width' data-class='subtotal' scope='rows' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='rows' value='none' />
+            <format attr='border-width' scope='cols' value='1' />
+            <format attr='border-style' scope='cols' value='solid' />
+            <format attr='border-color' scope='cols' value='#0b3f33' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='font-family' value='Tableau Light' />
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='8' />
+            <format attr='color' value='#b4b4b4' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-color' value='#69aaa5' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='div-level' scope='rows' value='1' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-color' scope='cols' value='#000000' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='div-level' scope='cols' value='2' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='annotation'>
+            <format attr='body-type' id='annotation_2' value='none' />
+            <format attr='fill-color' id='annotation_2' value='#00000000' />
+            <format attr='stroke-size' id='annotation_2' value='0' />
+            <format attr='line-visibility' id='annotation_2' value='off' />
+            <format attr='body-type' id='annotation_3' value='none' />
+            <format attr='fill-color' id='annotation_3' value='#00000000' />
+            <format attr='stroke-size' id='annotation_3' value='0' />
+            <format attr='line-visibility' id='annotation_3' value='off' />
+            <format attr='body-type' id='annotation_4' value='none' />
+            <format attr='fill-color' id='annotation_4' value='#00000000' />
+            <format attr='stroke-size' id='annotation_4' value='0' />
+            <format attr='line-visibility' id='annotation_4' value='off' />
+            <format attr='body-type' id='annotation_5' value='none' />
+            <format attr='fill-color' id='annotation_5' value='#00000000' />
+            <format attr='stroke-size' id='annotation_5' value='0' />
+            <format attr='line-visibility' id='annotation_5' value='off' />
+            <format attr='body-type' id='annotation_7' value='none' />
+            <format attr='fill-color' id='annotation_7' value='#00000000' />
+            <format attr='stroke-size' id='annotation_7' value='0' />
+            <format attr='line-visibility' id='annotation_7' value='off' />
+            <format attr='body-type' id='annotation_8' value='none' />
+            <format attr='fill-color' id='annotation_8' value='#00000000' />
+            <format attr='stroke-size' id='annotation_8' value='0' />
+            <format attr='line-visibility' id='annotation_8' value='off' />
+            <format attr='body-type' id='annotation_9' value='none' />
+            <format attr='fill-color' id='annotation_9' value='#00000000' />
+            <format attr='stroke-size' id='annotation_9' value='0' />
+            <format attr='line-visibility' id='annotation_9' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[io:color_granted_ Set:nk]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[sum:Avg. Granted CEO compensation:qk]' />
+              <lod column='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[sum:Avg. Realized CEO compensation:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#000000'>Decade:</run>
+                <run fontcolor='#787878'>Æ&#9;</run>
+                <run bold='true' fontcolor='#000000' fontname='Tableau Bold' fontsize='12'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]>s]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000'>Avg. Granted CEO compensation:&#9;</run>
+                <run bold='true' fontcolor='#765b91' fontname='Tableau Bold' fontsize='12'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[sum:Avg. Granted CEO compensation:qk]>:1]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#000000'>Avg. Realized CEO compensation:	</run>
+                <run bold='true' fontcolor='#499894' fontname='Tableau Bold' fontsize='12'><![CDATA[<[federated.1xsy6441k3ol2n1fc74wi19ehcru].[sum:Avg. Realized CEO compensation:qk]>:1]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='top' />
+                <format attr='text-align' value='right' />
+                <format attr='text-orientation' value='0' />
+                <format attr='wrap' value='on' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#000000' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='0.51574587821960449' />
+                <format attr='shape' value=':filled/circle' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok] * [federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk])</rows>
+        <cols>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</cols>
+        <annotations>
+          <annotation class='area' id='2' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run>23:1</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='3.4106844741235385'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1.3643726437102206'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>1960</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='7.1769616026711187'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-0.48178114541918937'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>1960</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='3' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run fontsize='7'>27:1</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='3.2504173622704506'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1.2024295759801955'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>1970</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='6.9365609348914852'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-0.35222624644457134'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>1970</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='4' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run fontsize='7'>49:1</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='6.375626043405676'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1.4291504638563621'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>1980</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='9.9816360601001648'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-0.12550535856840472'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>1980</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='5' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run fontsize='7'>153:1</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='21.520868113522535'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1.9473685771195086'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>1990</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='25.767946577629385'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-0.19028317871454625'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>1990</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='7' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run>298</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='60.003375527426158'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.91865469102140551'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>2010</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='61.869198312236293'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-0.94950796184549513'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>2010</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='8' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run fontsize='7'>262:1</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='37.387312186978292'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1.8825922396086954'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>2000</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='41.554257095158597'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='-0.25505951622535861'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>2000</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+          <annotation class='area' id='9' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run fontsize='7'>298:1</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='42.676126878130219'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2.8866417800149096'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>2010</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='44.358931552587649'>
+                  <node-reference>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='0.65182403527930788'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>2010</bucket>
+                    </multibucket>
+                    <axis>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{F1EFA000-78B9-4DB5-BAE6-412D4AD9784A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='CEO to Worker compensation ratio'>
+      <style />
+      <size maxheight='2000' maxwidth='1414' minheight='2000' minwidth='1414' preset-index='17' sizing-mode='fixed' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='bitmap' _.fcp.SetMembershipControl.true...type-v2='bitmap' forceUpdate='true' h='100000' id='3' is-scaled='1' param='C:/Users/Admin/Downloads/Black Neon Green Leaves Modern Beauty Skincare Flyer (13).png' w='100000' x='0' y='0' />
+        <zone h='44400' id='4' name='Compensation over the years' show-title='false' w='96322' x='1768' y='17700' />
+        <zone h='24750' id='8' name='compensation-decades' show-title='false' w='45545' x='2829' y='64400' />
+        <zone h='26250' id='20' name='%compensation since 1965' show-title='false' w='44696' x='52334' y='63750' />
+        <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='26400' hidden-by-user='true' id='17' param='vert' w='45474' x='51909' y='64050'>
+          <zone h='26400' hidden-by-user='true' id='16' name='%compensation yearly' show-title='false' w='45474' x='51909' y='64050'>
+            <layout-cache minheight='100' type-h='scalable' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#000000' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#000000' />
+          </zone-style>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='dashboard-object' _.fcp.SetMembershipControl.true...type-v2='dashboard-object' h='1550' id='19' w='8416' x='52263' y='63650'>
+          <button action='' active-visual-state-index='1' button-type='text'>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{4FE0A58B-8518-4D96-9EF3-AEC188AEB34A}&quot; zone-id=&quot;19&quot; zone-ids=[17]</toggle-action>
+            <button-visual-state>
+              <caption>since 1965</caption>
+              <tooltip-text>%growth in CEO compensation since 1965</tooltip-text>
+              <button-caption-font-style fontcolor='#898989' fontsize='9' />
+              <format attr='background-color' value='#33333334' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#333333' />
+            </button-visual-state>
+            <button-visual-state>
+              <caption>yearly growth</caption>
+              <tooltip-text>yearly %growth in CEO compensation </tooltip-text>
+              <button-caption-font-style fontcolor='#898989' fontsize='9' />
+              <format attr='background-color' value='#3333332f' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='1' />
+              <format attr='border-color' value='#333333' />
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='1500' id='46' w='31471' x='15347' y='63500'>
+          <formatted-text>
+            <run fontsize='12'>Growth in CEO compensation over the decades</run>
+          </formatted-text>
+        </zone>
+        <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='1200' id='47' w='21994' x='74752' y='63550'>
+          <formatted-text>
+            <run fontsize='12'>% Growth in CEO compensation</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid='{6C25D318-BE7B-473D-9673-5B53DFD12EF5}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='dashboard' maximized='true' name='CEO to Worker compensation ratio'>
+      <viewpoints>
+        <viewpoint name='%compensation since 1965'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='%compensation yearly'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Compensation over the years'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[io:color_granted Set:nk]'>
+            <bucket-selection />
+          </highlight>
+          <floating-toolbar-visibility value='2' />
+        </viewpoint>
+        <viewpoint name='compensation-decades'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <device-preview visible='true' />
+      <simple-id uuid='{4FE0A58B-8518-4D96-9EF3-AEC188AEB34A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='%compensation since 1965'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D57C2CA7-3A25-403D-AF41-ABB8B6455A5A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='%compensation yearly'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='7' param='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{376676A6-8F92-452B-B66A-D127AF9B5492}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Compensation over the years'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[io:color_granted Set:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[io:color_granted Set:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358841819137:ok]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358842773508:ok]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358871699462:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:ok]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:qk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:color_granted (copy)_367606358878257159:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[sum:Realized CEO compensation:qk]</field>
+          </color-one-way>
+        </highlight>
+        <floating-toolbar-visibility value='2' />
+      </viewpoint>
+      <simple-id uuid='{7E012D2A-5D7C-406C-821E-D361BB5FC133}' />
+    </window>
+    <window class='worksheet' hidden='true' name='compensation-decades'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='5' param='[federated.1xsy6441k3ol2n1fc74wi19ehcru].[io:color_granted_ Set:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[io:color_granted Set:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[io:color_granted_ Set:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358841819137:ok]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358842773508:ok]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Calculation_367606358871699462:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Col (copy)_1379508900190306304:ok]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Decades:ok]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Rows (copy)_1379508900190461953:ok]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:ok]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:Year:qk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:color_granted (copy)_367606358878257159:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[none:color_realized (copy)_1379508900191035395:nk]</field>
+            <field>[federated.1xsy6441k3ol2n1fc74wi19ehcru].[sum:Realized CEO compensation:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0A003C26-8195-48D7-B8CA-1BD8175C1FC3}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='CEO to Worker compensation ratio' width='192'>
+      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
+      RK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
